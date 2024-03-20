@@ -2,7 +2,7 @@
 export default{
   data(){
     return{
-      title:'Hello World!'
+      title: ['hello', 'ciao', 'hola', ]
     }
   }
 }
@@ -11,9 +11,13 @@ export default{
 
 <template>
 <div>
-  <h1>
-    {{title}}
-  </h1>
+  <ul v-for="saluto in  title" class="list-group">
+  <li class="list-group-item">{{ saluto }}</li>
+  <!-- <li class="list-group-item">A second item</li>
+  <li class="list-group-item">A third item</li>
+  <li class="list-group-item">A fourth item</li>
+  <li class="list-group-item">And a fifth one</li> -->
+</ul>
 </div>
 </template>
 
